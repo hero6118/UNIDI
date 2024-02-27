@@ -1,0 +1,19 @@
+Unhandled exception. System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: PayPalCheckoutSdk.Core.PayPalHttpClient Lifetime: Singleton ImplementationType: PayPalCheckoutSdk.Core.PayPalHttpClient': No constructor for type 'PayPalCheckoutSdk.Core.PayPalHttpClient' can be instantiated using services from the service container and default values.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: PayPalCheckoutSdk.Core.PayPalHttpClient Lifetime: Singleton ImplementationType: PayPalCheckoutSdk.Core.PayPalHttpClient': No constructor for type 'PayPalCheckoutSdk.Core.PayPalHttpClient' can be instantiated using services from the service container and default values.
+ ---> System.InvalidOperationException: No constructor for type 'PayPalCheckoutSdk.Core.PayPalHttpClient' can be instantiated using services from the service container and default values.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at UNIONTEK.API.Program.Main(String[] args) in G:\Thuan\Visual Studio\UniDi\UniDi.API\Program.cs:line 23
+   at UNIONTEK.API.Program.<Main>(String[] args)

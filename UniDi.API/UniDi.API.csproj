@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="Nsfw\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="Nsfw\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="Nsfw\**" />
+    <None Remove="logs\**" />
+    <None Remove="Nsfw\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BankController.cs" />
+    <Compile Remove="Controllers\BusinessPartnerController.cs" />
+    <Compile Remove="Controllers\CategoryController.cs" />
+    <Compile Remove="Controllers\InvoiceController.cs" />
+    <Compile Remove="Controllers\LocationController.cs" />
+    <Compile Remove="Controllers\LogisticController.cs" />
+    <Compile Remove="Controllers\NotifyController.cs" />
+    <Compile Remove="Controllers\PaymentPartnerController.cs" />
+    <Compile Remove="Controllers\PointController.cs" />
+    <Compile Remove="Controllers\ProductLuckyController.cs" />
+    <Compile Remove="Controllers\ShopController.cs" />
+    <Compile Remove="Controllers\ToolController.cs" />
+    <Compile Remove="Controllers\UnilikeController.cs" />
+    <Compile Remove="Controllers\UTOStartupController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="App.Config" />
+  </ItemGroup>
+	<ItemGroup>
+		<None Include="App.Config" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCoreRateLimit" Version="4.0.2" />
+		<PackageReference Include="EntityFramework" Version="6.4.4" />
+		<PackageReference Include="EPPlus" Version="6.2.10" />
+		<PackageReference Include="GoogleAuthenticator" Version="2.5.0" />
+		<PackageReference Include="HtmlRenderer.Core" Version="1.5.0.6">
+			<NoWarn>NU1701</NoWarn>
+		</PackageReference>
+		<PackageReference Include="HtmlRenderer.PdfSharp" Version="1.5.0.6">
+			<NoWarn>NU1701</NoWarn>
+		</PackageReference>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="6.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+		<PackageReference Include="net-ipfs-api" Version="0.4.10.3" NoWarn="NU1701" />
+		<PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+		<PackageReference Include="OpenCvSharp4.Windows" Version="4.5.5.20211231" />
+		<PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
+		<PackageReference Include="PdfSharp" Version="1.50.5147">
+			<NoWarn>NU1701</NoWarn>
+		</PackageReference>
+		<PackageReference Include="PDFtoImage" Version="2.1.0" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="2.1.2" />
+		<PackageReference Include="Svg" Version="3.4.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.1" />
+		<PackageReference Include="System.Data.OleDb" Version="6.0.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.18.0" />
+		<PackageReference Include="X.PagedList" Version="8.4.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="C:\Users\Administrator\.nuget\packages\nsfwnet\1.2.0\build\LICENSE.NSFW_SQUEEZENET.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="web.config">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Models\Request\Settings\" />
+	  <Folder Include="Excelfile\" />
+	</ItemGroup>
+
+</Project>
